@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sangeetmala!-v0.02-Testing</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar for Playlists -->
+    <div class="sidebar">
+      <h2 style="color: #ffafcc;">Sangeetmala!-v0.02</h2>
+      <ul>
+        <li>Home</li>
+        <li>Search</li>
+        <li>Your Library</li>
+        <li id="browseFilesBtn">Browse from your Computer</li>
+        <hr>
+        <li>Playlist 1</li>
+        <li>Playlist 2</li>
+        <li>Playlist 3</li>
+        <li>Currently Playing</li>
+        <div class="scrollable-list" id="currentlyPlaying">
+          <!-- Current playing song list will appear here -->
+        </div>
+        <li>Last Song Played</li>
+        <div class="scrollable-list" id="lastSongPlayed">
+          <!-- Last song played list will appear here -->
+        </div>
+        <li>Next Song in Queue</li>
+        <div class="scrollable-list" id="nextSongQueue">
+          <!-- Next song in queue list will appear here -->
+        </div>
+      </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <div class="now-playing">
+        <img src="album-cover.jpg" alt="Album Cover" class="album-cover">
+        <div class="song-info">
+          <h1 id="currentSong">Song Name</h1>
+          <p id="currentArtist">Artist Name</p>
+        </div>
+        <div class="player-version">
+          <p>player-version-0.02</p>
+        </div>
+      </div>
+      <div class="player-controls">
+        <button id="prevBtn">⏮️</button>
+        <button id="playPauseBtn">⏯️</button>
+        <button id="nextBtn">⏭️</button>
+      </div>
+
+      <!-- Search bar for filtering songs -->
+      <input type="text" id="searchBar" placeholder="Search songs by title or artist" class="search-bar">
+
+      <!-- Scrollable Current Queued Songs -->
+      <div class="scrollable-playlist" id="currentQueuedSongs">
+        <h2>Current Queued Songs</h2>
+        <!-- User's selected songs will appear here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Player Bar -->
+  <div class="bottom-player">
+    <div class="time-display">
+      <span id="currentTime">0:00</span>
+      <input type="range" id="progress" value="0" max="100" class="progress-bar">
+      <span id="totalDuration">0:00</span>
+    </div>
+    <div class="volume-control">
+      <p>Volume:</p>
+      <input type="range" id="volume" value="50" max="100">
+      <span id="volume-percentage">50%</span>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
